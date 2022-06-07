@@ -11,6 +11,19 @@ def paste(a:list, b):
     return a
 print(paste(str, s))
 
+#2) необходимо разработать функцию, принимающую список строк, число и
+#строку, и выполняющую вставку строки в указанную позицию, если вставка 
+#на указанную позицию невозможна, то вернуть сообщение «paste operation is
+#not possible»;
+s = input("Введите строку: ")
+index = int(input("Введите позицию: "))
+b = input("Введите строку: ")
+def insert_dash(s, index):
+    if index > len(s):
+        return print("paste operation is not possible")
+    return s[:index] + b + s[index:]
+print(insert_dash(s, index))
+
 #3) необходимо разработать функцию, принимающую список строк и число, и
 #выполняющую удаление строки по указанной позицию списка, если удаление
 #невозможно, то вернуть сообщение «delete operation is not possible».
