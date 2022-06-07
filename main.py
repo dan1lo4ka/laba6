@@ -23,3 +23,16 @@ def insert_dash(s, index):
         return print("paste operation is not possible")
     return s[:index] + b + s[index:]
 print(insert_dash(s, index))
+
+#3) необходимо разработать функцию, принимающую список строк и число, и
+#выполняющую удаление строки по указанной позицию списка, если удаление
+#невозможно, то вернуть сообщение «delete operation is not possible».
+s = list(input("Введите строку: "))
+print(s[2])
+a = int(input("Введите позицию: "))
+def str(s, a):
+    if a > len(s):
+        return print("delete operation is not possible")
+    del s[a]
+    return "".join(s)
+print(str(s, a))
